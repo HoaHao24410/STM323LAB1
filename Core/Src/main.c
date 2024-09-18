@@ -153,6 +153,8 @@ void display7SEG(int num){
 		HAL_GPIO_WritePin(SEG_6_GPIO_Port, SEG_6_Pin, GPIO_PIN_RESET);
 	    }
 
+	HAL_Delay(1000);
+
 }
 int main(void)
 {
@@ -185,18 +187,18 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  //int led_status = 0;
-  //int count = 0;
-  int counter = 0;
+  int led_status = 0;
+  int count = 0;
+  int counter = 3;
   while (1)
   {
-	  if(counter >= 10){
+	 /* if(counter >= 10){
 		  counter = 0;
 	  }
 	  display7SEG(counter);
 	  counter = counter + 1;
 	  HAL_Delay (1000);
-	  /*
+	 */
 	  if(led_status==0){
 		  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);//đèn đ�? 1
 		  HAL_GPIO_WritePin(LED2_GPIO_Port, LED2_Pin, GPIO_PIN_RESET);//đèn vàng 1
@@ -205,6 +207,7 @@ int main(void)
 		  HAL_GPIO_WritePin(LED5_GPIO_Port, LED5_Pin, GPIO_PIN_RESET);//đèn vàng 2
 		  HAL_GPIO_WritePin(LED6_GPIO_Port, LED6_Pin, GPIO_PIN_SET);//đèn xanh 2
 		  count = 3000;
+
 	  }
 	  else if(led_status==1){
 		  HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, GPIO_PIN_SET);//đèn đ�? 1
@@ -234,9 +237,16 @@ int main(void)
 		  count = 2000;
 	  }
 	  led_status = (led_status + 1) % 4;
-	  HAL_Delay(count);
-	  */
-
+	  if(count==3000){
+		  for(int i=3; i>=0; i--){
+			  display7SEG(i);
+		  }
+	  }
+	  else if(count==2000){
+		  for(int i=2; i>=0; i--){
+			  display7SEG(i);
+		  }
+	  }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
