@@ -222,6 +222,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   setTimer1(100);
   setTimer2(100);
+  int hour, second, minute;
   while (1)
   {
     /* USER CODE END WHILE */
