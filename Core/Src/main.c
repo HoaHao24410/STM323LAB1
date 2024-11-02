@@ -56,6 +56,7 @@ static void MX_TIM2_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
+int led_buffer[4] = {1,2,3,4};
 void display7SEG(int num){
 	if(num==0){
 			HAL_GPIO_WritePin(SEG0_GPIO_Port, SEG0_Pin, GPIO_PIN_RESET);
@@ -220,7 +221,7 @@ int main(void)
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   setTimer1(100);
-  setTimer2(1000);
+  setTimer2(100);
   while (1)
   {
     /* USER CODE END WHILE */
@@ -232,7 +233,7 @@ int main(void)
 	 	  }
 
 	 	  if(timer2_flag == 1){
-	 		  setTimer2(1000);
+	 		  setTimer2(100);
 	 		  if(index_led <= 3 ){
 	 			  update7SEG(index_led++);
 	 		  }
