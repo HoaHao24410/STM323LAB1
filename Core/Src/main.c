@@ -224,17 +224,27 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  if(timer1_flag == 1){
-		  setTimer1(100);
-		  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
-
-	  }
 
     /* USER CODE BEGIN 3 */
+	  if(timer1_flag == 1){
+	 		  setTimer1(100);
+	 		  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+	 	  }
+
+	 	  if(timer2_flag == 1){
+	 		  setTimer2(1000);
+	 		  if(index_led <= 3 ){
+	 			  update7SEG(index_led++);
+	 		  }
+	 		  if(index_led > 3){
+	 			  index_led = 0;
+	 			  update7SEG(index_led);
+	 		  }
+	 	  }
 
 
-  }
   /* USER CODE END 3 */
+}
 }
 
 /**
