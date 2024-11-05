@@ -227,7 +227,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  //setTimer1(1000);
+  setTimer1(100);
   setTimer2(100);
 
   while (1)
@@ -244,10 +244,8 @@ int main(void)
 	  if(timer2_flag == 1){
 	 	  setTimer2(100);
 	 	  update7SEG(index_led);
-	 	  if(index_led <= 3){
-	 		  index_led++;
-	 	  }
-	 	  else{
+	 	  index_led++;
+	 	  if(index_led > 3){
 	 		  index_led = 0;
 	 	  }
 	 	 second++;
