@@ -234,12 +234,10 @@ int main(void)
 
 	 	  if(timer2_flag == 1){
 	 		  setTimer2(100);
-	 		  if(index_led <= 3 ){
-	 			  update7SEG(index_led++);
-	 		  }
+	 		  update7SEG(index_led);
+	 		  index_led++;
 	 		  if(index_led > 3){
 	 			  index_led = 0;
-	 			  update7SEG(index_led);
 	 		  }
 	 	  }
 
