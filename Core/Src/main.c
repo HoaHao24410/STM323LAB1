@@ -227,9 +227,8 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  setTimer1(100);
+  setTimer1(25);
   setTimer2(100);
-
   while (1)
   {
     /* USER CODE END WHILE */
@@ -238,13 +237,15 @@ int main(void)
 	  updateClockBuffer(hour, minute);
 
 	  if(timer1_flag == 1){
-	 		  setTimer1(100);
-	 		  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+	 		 setTimer1(25);
+	 		 update7SEG(index_led);
+	 		 index_led++;
 	 	  }
 	  if(timer2_flag == 1){
 	 	  setTimer2(100);
-	 	  update7SEG(index_led);
-	 	  index_led++;
+	 	  HAL_GPIO_TogglePin(DOT_GPIO_Port, DOT_Pin);
+
+
 	 	  if(index_led > 3){
 	 		  index_led = 0;
 	 	  }
