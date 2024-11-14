@@ -57,7 +57,7 @@ static void MX_TIM2_Init(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 int led_buffer[4];
-int hour = 15, second = 8, minute = 50;
+int hour = 15, minute = 8,  second = 50;
 void display7SEG(int num){
 	if(num==0){
 			HAL_GPIO_WritePin(SEG0_GPIO_Port, SEG0_Pin, GPIO_PIN_RESET);

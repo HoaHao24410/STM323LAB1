@@ -83,7 +83,7 @@ Disassembly of section .text:
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 int led_buffer[4];
-int hour = 15, second = 8, minute = 50;
+int hour = 15, minute = 8,  second = 50;
 void display7SEG(int num){
  800014c:	b580      	push	{r7, lr}
  800014e:	b082      	sub	sp, #8
@@ -864,12 +864,12 @@ int main(void)
  80006be:	bf00      	nop
  80006c0:	20000034 	.word	0x20000034
  80006c4:	20000000 	.word	0x20000000
- 80006c8:	20000008 	.word	0x20000008
+ 80006c8:	20000004 	.word	0x20000004
  80006cc:	20000094 	.word	0x20000094
  80006d0:	40010800 	.word	0x40010800
  80006d4:	20000098 	.word	0x20000098
  80006d8:	2000009c 	.word	0x2000009c
- 80006dc:	20000004 	.word	0x20000004
+ 80006dc:	20000008 	.word	0x20000008
 
 080006e0 <SystemClock_Config>:
 /**

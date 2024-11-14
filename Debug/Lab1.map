@@ -2853,10 +2853,10 @@ LOAD C:/ST/STM32CubeIDE_1.16.0/STM32CubeIDE/plugins/com.st.stm32cube.ide.mcu.ext
  *(.data*)
  .data.hour     0x20000000        0x4 ./Core/Src/main.o
                 0x20000000                hour
- .data.second   0x20000004        0x4 ./Core/Src/main.o
-                0x20000004                second
- .data.minute   0x20000008        0x4 ./Core/Src/main.o
-                0x20000008                minute
+ .data.minute   0x20000004        0x4 ./Core/Src/main.o
+                0x20000004                minute
+ .data.second   0x20000008        0x4 ./Core/Src/main.o
+                0x20000008                second
  .data.SystemCoreClock
                 0x2000000c        0x4 ./Core/Src/system_stm32f1xx.o
                 0x2000000c                SystemCoreClock
