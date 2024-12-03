@@ -8,4 +8,4 @@
 int status = 0;
 int r = 5;
 int g = 3;
-int r = 2;
+int a = 2;

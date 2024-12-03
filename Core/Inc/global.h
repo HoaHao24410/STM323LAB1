@@ -22,6 +22,9 @@
 #define SETTING_GREEN   23
 #define SETTING_AMBER   24
 
+#define N0_OF_BUTTONS	3
+
+
 #include "main.h"
 #include "button.h"
 #include "software_timer.h"

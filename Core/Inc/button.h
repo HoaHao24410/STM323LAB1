@@ -10,6 +10,7 @@
 
 
 #include "main.h"
+#include "global.h"
 
 #define NORMAL_STATE SET
 #define PRESSED_STATE RESET
