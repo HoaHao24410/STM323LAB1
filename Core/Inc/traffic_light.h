@@ -9,7 +9,7 @@
 #define INC_TRAFFIC_LIGHT_H_
 #include "main.h"
 #include "global.h"
-
+void clearAll_led();
 void led_green_red();
 
 void led_amber_red();
