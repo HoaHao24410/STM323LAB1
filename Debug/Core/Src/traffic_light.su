@@ -3,3 +3,6 @@
 ../Core/Src/traffic_light.c:22:6:led_amber_red	8	static
 ../Core/Src/traffic_light.c:28:6:led_red_green	8	static
 ../Core/Src/traffic_light.c:34:6:led_red_amber	8	static
+../Core/Src/traffic_light.c:39:6:led_red_blinking	8	static
+../Core/Src/traffic_light.c:44:6:led_amber_blinking	8	static
+../Core/Src/traffic_light.c:49:6:led_green_blinking	8	static

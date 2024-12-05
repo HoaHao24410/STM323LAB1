@@ -29,10 +29,15 @@
 #include "button.h"
 #include "software_timer.h"
 
+extern int jump1; // thời gian chuyển trạng thái của đèn xanh
+extern int jump2; // thời gian chuyển trạng thái của đèn vàng
 extern int r; //red_time count_down
 extern int g;// green_time count_down
 extern int a;//amber_time count_down
 extern int status;
-
+extern int max_r;
+extern int max_g;
+extern int max_a;
+extern int value; // hiển thị the value 1-99
 
 #endif /* INC_GLOBAL_H_ */

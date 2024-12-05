@@ -18,5 +18,10 @@ void led_red_green();
 
 void led_red_amber();
 
+void led_red_blinking();
+
+void led_green_blinking();
+
+void led_amber_blinking();
 
 #endif /* INC_TRAFFIC_LIGHT_H_ */

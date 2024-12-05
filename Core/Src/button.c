@@ -15,8 +15,10 @@ int button_flag[N0_OF_BUTTONS] = {0};
 int button_long_pressed[N0_OF_BUTTONS] = {0};
 
 int isButtonPressed(int index){
-	if(button_flag[index] == 1)
+	if(button_flag[index] == 1){
+		button_flag[index] = 0;
 		return 1;
+	}
 	return 0;
 }
 

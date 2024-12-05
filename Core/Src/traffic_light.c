@@ -32,7 +32,21 @@ void led_red_green(){
 }
 
 void led_red_amber(){
-	HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, RESET);
-	HAL_GPIO_WritePin(LED4_GPIO_Port, LED4_Pin, RESET);
+	HAL_GPIO_WritePin(LED1_GPIO_Port, LED1_Pin, SET);
+	HAL_GPIO_WritePin(LED4_GPIO_Port, LED4_Pin, SET);
 
+}
+void led_red_blinking(){
+	HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
+	HAL_GPIO_TogglePin(LED6_GPIO_Port, LED6_Pin);
+}
+
+void led_amber_blinking(){
+	HAL_GPIO_TogglePin(LED3_GPIO_Port, LED3_Pin);
+	HAL_GPIO_TogglePin(LED4_GPIO_Port, LED4_Pin);
+}
+
+void led_green_blinking(){
+	HAL_GPIO_TogglePin(LED2_GPIO_Port, LED2_Pin);
+	HAL_GPIO_TogglePin(LED5_GPIO_Port, LED5_Pin);
 }

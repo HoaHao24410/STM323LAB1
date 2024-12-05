@@ -11,6 +11,7 @@
 #include "global.h"
 #include "traffic_light.h"
 #include "led7_segment.h"
+#include "button.h"
 void fsm_automatic_run();
 
 
