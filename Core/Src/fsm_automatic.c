@@ -88,6 +88,16 @@ void fsm_automatic_run(){
 				setTimer1(jump1);
 				clearAll_led();
 			}
+			if(isButtonPressed(0) == 1){
+				status = SETTING_RED;
+				setTimer1(1);
+				setTimer2(1);
+				clearAll_led();
+			}
+			if(isButtonPressed(2) == 1){
+				status = MAN_GREEN_RED;
+				clearAll_led();
+			}
 			break;
 		case RED_GREEN:
 			led_red_green();
