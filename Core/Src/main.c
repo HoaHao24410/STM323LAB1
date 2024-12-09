@@ -97,7 +97,7 @@ int main(void)
   /* USER CODE BEGIN 2 */
   HAL_TIM_Base_Start_IT(&htim2);
   /* USER CODE END 2 */
-
+  SCH_Init();
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   SCH_Add_Task(fsm_automatic_run, 0, 1) ;
@@ -253,7 +253,7 @@ static void MX_GPIO_Init(void)
 
 /* USER CODE BEGIN 4 */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
-	//timerRun();
+	timerRun();
 	SCH_Update();
 
 	getKeyInput();

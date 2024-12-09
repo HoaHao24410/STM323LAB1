@@ -30,8 +30,8 @@ typedef struct {
 
 extern sTask SCH_tasks_G[SCH_MAX_TASKS];
 
-extern int counter;
-extern int delay_time;
+//extern int counter;
+//extern int delay_time;
 
 
 void SCH_Init(void);
