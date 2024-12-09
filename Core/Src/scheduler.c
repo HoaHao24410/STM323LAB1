@@ -5,7 +5,7 @@
  *      Author: ASUS
  */
 #include "scheduler.h"
-int counter = 0;
+int counter;
 sTask SCH_tasks_G[];
 void SCH_Init(void){
 	unsigned char i;

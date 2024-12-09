@@ -9,6 +9,7 @@
 void fsm_automatic_run(){
 	switch(status){
 		case INIT:
+			value = 1;
 			status = GREEN_RED;
 			clearAll_led();
 			//updateClockBuffer(r, g);
@@ -88,6 +89,16 @@ void fsm_automatic_run(){
 				setTimer1(jump1);
 				clearAll_led();
 			}
+			if(isButtonPressed(0) == 1){
+				status = SETTING_RED;
+				setTimer1(1);
+				setTimer2(1);
+				clearAll_led();
+			}
+			if(isButtonPressed(2) == 1){
+				status = MAN_GREEN_RED;
+				clearAll_led();
+			}
 			break;
 		case RED_GREEN:
 			led_red_green();
@@ -120,6 +131,16 @@ void fsm_automatic_run(){
 				setTimer1(jump2);
 				clearAll_led();
 			}
+			if(isButtonPressed(0) == 1){
+				status = SETTING_RED;
+				setTimer1(1);
+				setTimer2(1);
+				clearAll_led();
+			}
+			if(isButtonPressed(2) == 1){
+				status = MAN_GREEN_RED;
+				clearAll_led();
+			}
 			break;
 		case RED_AMBER:
 			led_red_amber();
@@ -147,6 +168,16 @@ void fsm_automatic_run(){
 
 			if(timer1_flag == 1){
 				status = INIT;
+			}
+			if(isButtonPressed(0) == 1){
+				status = SETTING_RED;
+				setTimer1(1);
+				setTimer2(1);
+				clearAll_led();
+			}
+			if(isButtonPressed(2) == 1){
+				status = MAN_GREEN_RED;
+				clearAll_led();
 			}
 			break;
 		default:
