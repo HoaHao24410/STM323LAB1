@@ -9,6 +9,7 @@
 void fsm_automatic_run(){
 	switch(status){
 		case INIT:
+			value = 1;
 			status = GREEN_RED;
 			clearAll_led();
 			//updateClockBuffer(r, g);
